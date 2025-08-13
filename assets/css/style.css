@@ -2045,3 +2045,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* 다크 테마에서 다른 글로벌 규칙이 덮으면 강제 */
 strong, b { font-weight:700 !important; }
+
+/* === Fix: About > Education 아이콘 박스 중앙을 타임라인 수직선에 정렬 === */
+.about .timeline .title-wrapper { margin-left: 0; }              /* 모바일~태블릿 기본값 */
+/* 아이콘이 48px로 커지는 구간(>=580px)에서 수직선이 섹션 왼쪽에서 약 25px에 위치하므로
+   아이콘 중심(24px)이 그 지점에 오도록 1px만 살짝 밀어 정렬 */
+@media (min-width: 580px) {
+  .about .timeline .title-wrapper { margin-left: 1px; }
+}
