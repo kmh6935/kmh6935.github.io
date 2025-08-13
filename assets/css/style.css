@@ -1894,7 +1894,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .edu-list::before{
   content: "";
   position: absolute;
-  left: 30px;                /* 점 중앙과 일치하도록 */
+  left: 100px;                /* 점 중앙과 일치하도록 */
   top: 2px;
   bottom: 0;
   width: 2px;
