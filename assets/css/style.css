@@ -844,6 +844,14 @@ main {
 
 .clients { margin-bottom: 15px; }
 
+.clients .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 10px;
+  margin-bottom: 18px;
+}
+
 .clients-list {
   display: flex;
   justify-content: flex-start;
