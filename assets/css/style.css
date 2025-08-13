@@ -500,16 +500,6 @@ main {
 
 .about .article-title { margin-bottom: 15px; }
 
-.about .article-title::after {
-  content: "";
-  display: block;
-  width: 34px;
-  height: 4px;
-  border-radius: 4px;
-  background: var(--accent);
-  margin-top: 8px;
-}
-
 .about-text {
   color: var(--light-gray);
   font-size: var(--fs-6);
@@ -517,20 +507,7 @@ main {
   line-height: 1.6;
 }
 
-/* .about-text p { margin-bottom: 15px; } */
-.about-text p {
-  line-height: 1.8;
-  font-size: 1rem;
-  color: #e9e9e9;
-  margin: 0 0 1.1rem;
-}
-
-.hi {
-  background: linear-gradient(transparent 60%, rgba(244,196,48,0.35) 0);
-  padding: 0 .08em;
-  font-weight: 700;
-}
-
+.about-text p { margin-bottom: 15px; }
 
 /**
  * #service 
