@@ -1882,7 +1882,3 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
-strong, b {
-  font-weight: 700 !important; /* 굵기 강제 적용 */
-}
-
