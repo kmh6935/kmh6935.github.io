@@ -1881,3 +1881,34 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+/* === Highlight & About tweaks === */
+
+/* 텍스트 하이라이트 (형광펜 느낌) */
+.hi{
+  background: linear-gradient(transparent 60%, rgba(244,196,48,0.35) 0);
+  padding: 0 .08em;
+  font-weight: 700;
+}
+
+/* About 문단 가독성(다크 배경 대비) */
+.about .about-text p{
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #e9e9e9;
+  margin: 0 0 1.1rem;
+}
+
+/* 제목 밑줄을 그라데이션 대신 단색 포인트로 쓰고 싶다면 활성화
+.about .article-title::after{
+  background: var(--accent);  /* 이미 :root에 --accent 존재 */
+  width: 34px;
+  height: 4px;
+  border-radius: 4px;
+}
+*/
+
+/* 소셜 아이콘 hover에 포인트 컬러 주기 (선택) */
+.social-item .social-link:hover{
+  color: var(--accent);
+}
