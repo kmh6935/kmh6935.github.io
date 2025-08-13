@@ -590,7 +590,7 @@ main {
 
 
 .timeline .title-wrapper {
-  margin-left: 10px;
+  margin-left: 0px;
   display: flex;
   align-items: center;
   gap: 15px;
