@@ -1917,10 +1917,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   height: 14px;
   border-radius: 50%;
   background: radial-gradient(circle at 35% 35%, #ffe08a 0%, #ffc107 60%, #ffb300 100%);
-  border: 3px solid #2f2f2f;      /* 짙은 회색 두꺼운 테두리 */
-  box-shadow:
-    0 0 0 2px rgba(0,0,0,0.35),   /* 바깥 어두운 링 */
-    inset 0 0 2px rgba(0,0,0,0.35);
+  border: 5px solid #2f2f2f;      /* 짙은 회색 두꺼운 테두리 */
   margin-top: 6px;
   position: relative;
   z-index: 1;                      /* 라인 위에 오도록 */
