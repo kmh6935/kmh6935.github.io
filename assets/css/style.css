@@ -604,6 +604,10 @@ main {
 
 .timeline-item { position: relative; }
 
+.timeline-item::before {
+  left: -22px; /* 네모 박스를 왼쪽으로 이동 (기존보다 조금 더 작게) */
+}
+
 .timeline-item:not(:last-child) { margin-bottom: 20px; }
 
 .timeline-item-title {
