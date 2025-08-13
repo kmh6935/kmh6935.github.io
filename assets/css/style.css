@@ -1882,54 +1882,54 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
-/* Education 섹션 전체 글씨 색상 */
-.education-section {
-  color: #fff; /* 흰색 글씨 */
-  margin-top: 2rem;
-}
+/* ===== Education timeline (refined) ===== */
+.education { margin-top: 2rem; }
 
-/* 타임라인 스타일 */
-.edu-list {
+.edu-list{
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 0 36px;       /* 왼쪽 여백 넉넉히 */
   position: relative;
 }
-
-.edu-list::before {
+.edu-list::before{
   content: "";
   position: absolute;
-  left: 10px;
-  top: 0;
+  left: 18px;                /* 점 중앙과 일치하도록 */
+  top: 2px;
   bottom: 0;
   width: 2px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255,255,255,0.18);  /* 수직 라인 */
 }
 
-/* 각 항목 */
-.edu-list li {
+/* 한 항목 */
+.edu-entry{
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 14px;
+  padding-bottom: 18px;
   position: relative;
 }
 
-/* 노란 점 + 회색 테두리 */
-.edu-dot {
-  flex-shrink: 0;
-  width: 12px;
-  height: 12px;
-  background: #FFD700;       /* 노란색 */
-  border: 2px solid #444;    /* 짙은 회색 테두리 */
+/* 노란 점: 짙은 회색 굵은 테두리 + 살짝 광택 */
+.edu-dot{
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
-  margin-top: 4px;
+  background: radial-gradient(circle at 35% 35%, #ffe08a 0%, #ffc107 60%, #ffb300 100%);
+  border: 3px solid #2f2f2f;      /* 짙은 회색 두꺼운 테두리 */
+  box-shadow:
+    0 0 0 2px rgba(0,0,0,0.35),   /* 바깥 어두운 링 */
+    inset 0 0 2px rgba(0,0,0,0.35);
+  margin-top: 6px;
   position: relative;
-  z-index: 1;
+  z-index: 1;                      /* 라인 위에 오도록 */
 }
 
-/* 학위 제목 강조 */
-.edu-list strong {
-  font-weight: 700;
-  color: #fff;
-}
+/* 텍스트 톤: 제목은 흰색, 학교/연도는 밝은 회색 */
+.edu-text .edu-degree{ color:#fff; line-height:1.35; }
+.edu-text .edu-degree strong{ font-weight:700; } /* 볼드 보장 */
+.edu-text .edu-school{ color:#bdbdbd; line-height:1.55; }
+
+/* 다크 테마에서 다른 글로벌 규칙이 덮으면 강제 */
+strong, b { font-weight:700 !important; }
