@@ -1884,13 +1884,6 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* === Highlight & About tweaks === */
 
-/* 텍스트 하이라이트 (형광펜 느낌) */
-.hi{
-  background: linear-gradient(transparent 60%, rgba(244,196,48,0.35) 0);
-  padding: 0 .08em;
-  font-weight: 700;
-}
-
 /* About 문단 가독성(다크 배경 대비) */
 .about .about-text p{
   line-height: 1.8;
@@ -1911,4 +1904,20 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* 소셜 아이콘 hover에 포인트 컬러 주기 (선택) */
 .social-item .social-link:hover{
   color: var(--accent);
+}
+
+/* Emphasis color styles */
+.em-yellow {
+  color: #f4c430; /* warm yellow */
+  font-weight: 600;
+}
+
+.em-orange {
+  color: #ffb84d; /* soft orange */
+  font-weight: 600;
+}
+
+.em-blue {
+  color: #4db8ff; /* light blue */
+  font-weight: 600;
 }
