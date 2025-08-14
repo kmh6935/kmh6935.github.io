@@ -136,24 +136,55 @@ for (let i = 0; i < formInputs.length; i++) {
 
 
 
-// page navigation variables
+// // page navigation variables
+// const navigationLinks = document.querySelectorAll("[data-nav-link]");
+// const pages = document.querySelectorAll("[data-page]");
+
+// // add event to all nav link
+// for (let i = 0; i < navigationLinks.length; i++) {
+//   navigationLinks[i].addEventListener("click", function () {
+
+//     for (let i = 0; i < pages.length; i++) {
+//       if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+//         pages[i].classList.add("active");
+//         navigationLinks[i].classList.add("active");
+//         window.scrollTo(0, 0);
+//       } else {
+//         pages[i].classList.remove("active");
+//         navigationLinks[i].classList.remove("active");
+//       }
+//     }
+
+//   });
+// }
+
+// page navigation variables (FIXED)
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
+// 버튼 텍스트 -> data-page 매핑 (필요 시 확장)
+const navMap = {
+  about: "about",
+  publications: "publications", // 버튼 "Publications" → data-page="publications"
+};
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+navigationLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const key = link.textContent.trim().toLowerCase();
+    const target = navMap[key] || key; // 혹시 같은 이름이면 그대로 사용
+
+    // 페이지 표시 토글
+    pages.forEach((page) => {
+      const isTarget = page.dataset.page === target;
+      page.classList.toggle("active", isTarget);
+      if (isTarget) {
+        // 해당 섹션 상단으로 부드럽게 이동
+        page.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    }
+    });
 
+    // 네비게이션 active 토글 (인덱스 의존 제거)
+    navigationLinks.forEach((btn) => btn.classList.remove("active"));
+    link.classList.add("active");
   });
-}
+});
