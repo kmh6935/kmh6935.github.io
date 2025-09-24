@@ -2272,3 +2272,28 @@ strong, b { font-weight:700 !important; }
   max-height: 1100px;
   overflow-y: auto;
 }
+
+
+/* News 헤더를 Education과 정확히 같은 x위치로 정렬 */
+.about .news-section .title-wrapper {
+  margin-left: 0;      /* 모바일~ */
+  gap: 15px;           /* Education과 동일 간격 */
+}
+
+@media (min-width: 580px) {
+  .about .news-section .title-wrapper {
+    margin-left: 1px;  /* Education과 동일 */
+  }
+}
+
+/* 아이콘 박스 크기/정렬도 Education과 동일하게 보정 */
+.about .news-section .icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+.about .news-section .icon-box i {
+  font-size: 18px;
+  line-height: 1;
+  display: inline-block;
+}
