@@ -587,7 +587,11 @@ main {
   align-items: center;
   justify-content: center;
 } */
-
+.news-section .icon-box i {
+  font-size: 18px;   /* >=580px에서 .icon-box(48x48)와 균형 */
+  line-height: 1;
+  display: inline-block;
+}
 
 .timeline .title-wrapper {
   margin-left: 10px;
