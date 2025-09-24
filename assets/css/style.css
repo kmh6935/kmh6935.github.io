@@ -579,14 +579,14 @@ main {
   margin: 0;               /* 🔧 Remove default top margin */
   line-height: 1.2;        /* Optional: Tweak as needed */
 }
-
+/* 
 .news-section .icon-box {
   width: 28px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 
 .timeline .title-wrapper {
