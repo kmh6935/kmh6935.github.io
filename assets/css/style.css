@@ -670,7 +670,77 @@ main {
   margin-bottom: 30px;
 }
 
+/**
+ * NEWS
+ */
 
+.news-container {
+  position: relative;
+  width: 95%; 
+  max-width: 1000px;
+  height: auto;
+  margin: auto;
+  background: var(--eerie-black-2); 
+  padding: 5px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 50px;
+}
+
+/* Default scroll only for very tall screens */
+@media screen {
+  .news-container {
+    max-height: 210px;
+    overflow-y: auto;
+  }
+}
+
+/* 
+Disable scroll on short or portrait screens */
+@media screen and (orientation: portrait) {
+  .news-container {
+    max-height: 210px;
+    overflow-y: auto;
+  }
+}
+
+/* Adjusting the list to fit within the container */
+.news-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-item {
+  display: inline-flex; /* Aligns bullet and text properly */
+  align-items: flex-start; /* Aligns bullet with first line */
+  position: relative;
+  padding-left: 5px; /* Adjust padding for spacing */
+  font-weight: var(--fw-300);
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  line-height: 1.5  ;
+  margin-bottom: 15px;
+}
+
+
+.news-item:first-child {
+  margin-top: 10px; 
+}
+
+.news-item:last-child {
+  margin-bottom: 10px; 
+}
+
+.news-item::before {
+  content: "•"; 
+  font-size: 25px; /* Adjust bullet size */
+  color: var(--orange-yellow-crayola);
+  margin-right: 10px; /* Adds spacing between bullet and text */
+  line-height: 0.8;
+  display: flex;
+  align-items: center; /* Ensures bullet aligns with text */
+}
 
 /**
  * #testimonials 
