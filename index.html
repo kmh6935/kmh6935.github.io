@@ -345,7 +345,88 @@
         <header>
           <h2 class="h2 article-title">Research</h2>
         </header>
-      
+          <p class="lead">
+    We develop <strong>physics-informed AI</strong> and <strong>Uncertainty Quantification (UQ)</strong> for
+    resilient civil infrastructure. We fuse physics with data to build <strong>digital twins</strong> of wind turbines
+    and civil structures—enabling real-time state estimation, fatigue &amp; extreme-event monitoring, and
+    uncertainty-aware decision making.
+  </p>
+
+  <div class="research-grid">
+    <!-- A -->
+    <section class="research-card content-card">
+      <h3 class="h3">A. Digital Twins &amp; Structural Health Monitoring</h3>
+      <p>
+        We design <strong>model-based deep learning</strong> filters that keep physics in the loop.
+        Our <strong>KalmanNet</strong> and <strong>Eigen-Decomposition KalmanNet (ED-KN)</strong> frameworks
+        estimate latent structural states under sensor noise and model errors, enforcing
+        positive-definite covariance via eigen decomposition and masking.
+      </p>
+      <ul class="bullets">
+        <li>Real-time state estimation; drift/covariance stabilization; sensor-dropout robustness</li>
+        <li>Monitoring: tower-top displacement/rotation, anomaly detection, <em>fatigue</em> &amp; extreme events</li>
+        <li>Pipeline: OpenFAST/TurbSim → GRU/bi-GRU → ED-KN(SVD) → KF runtime (deployable)</li>
+        <li>Impact: reduced downtime &amp; maintenance cost</li>
+      </ul>
+      <div class="tags">
+        <span>KalmanNet</span><span>ED-KN</span><span>SHM</span><span>Physics-guided RNN</span>
+      </div>
+    </section>
+
+    <!-- B -->
+    <section class="research-card content-card">
+      <h3 class="h3">B. Surrogate Modeling &amp; Adaptive Design</h3>
+      <p>
+        We build application-driven surrogates (e.g., <strong>Gaussian Process</strong> emulators, ROMs) with
+        <strong>adaptive/sequential design</strong> to learn efficiently in noisy, high-dimensional spaces for
+        calibration, optimization, and risk analysis.
+      </p>
+      <ul class="bullets">
+        <li>Stochastic emulation; dimensionality reduction; acquisition-driven sampling</li>
+        <li>Uncertainty tracking in the emulator for safe decisions</li>
+        <li>Use cases: rapid risk evaluation for wind/earthquake/fire scenarios</li>
+      </ul>
+      <div class="tags">
+        <span>GP</span><span>SeD/DoE</span><span>ROM</span><span>Emulator UQ</span>
+      </div>
+    </section>
+
+    <!-- C -->
+    <section class="research-card content-card">
+      <h3 class="h3">C. Reliability, UQ &amp; Risk-Informed Decisions</h3>
+      <p>
+        We quantify uncertainty from inputs to decisions using the <strong>Quadratic Point Estimate Method (QPEM)</strong>
+        and <strong>copula-based</strong> dependencies for non-Gaussian, correlated inputs; we study component and
+        <strong>system-level</strong> reliability, fragility, and loss metrics.
+      </p>
+      <ul class="bullets">
+        <li>Finding: sigma-point placement governs QPEM tail behavior</li>
+        <li>Small σ → accuracy can persist beyond 3-σ; large σ → tail sensitivity increases</li>
+        <li>Hazard-to-decision pipelines with resilience metrics</li>
+      </ul>
+      <div class="tags">
+        <span>QPEM</span><span>Copulas</span><span>Fragility</span><span>System Reliability</span>
+      </div>
+    </section>
+
+    <!-- D -->
+    <section class="research-card content-card">
+      <h3 class="h3">D. Data–Model Fusion, Forecasting &amp; Control</h3>
+      <p>
+        We couple data assimilation with learning-based forecasting of structural states and explore
+        <strong>reinforcement learning</strong> for O&amp;M under uncertainty; <strong>Value of Information (VoI)</strong>
+        guides sensing and experimentation.
+      </p>
+      <ul class="bullets">
+        <li>NN-based multi-step forecasts using DT histories</li>
+        <li>RL policies informed by model-based uncertainty</li>
+        <li>Goal: trustworthy, uncertainty-aware operations</li>
+      </ul>
+      <div class="tags">
+        <span>Forecasting</span><span>RL</span><span>VoI</span><span>Decision Analytics</span>
+      </div>
+    </section>
+  </div>
        
             
           </ul>
